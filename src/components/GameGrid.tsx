@@ -12,10 +12,10 @@ const GameGrid = () => {
     <>
       {error && <Text>{error}</Text>}
       <SimpleGrid
-        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        columns={{ sm: 1, md: 2, lg: 3, xl: 5 }}
         // or padding="10px" spacing={10} this will add only for left-right
-        padding={10}
-        spacing={10}
+        padding="10px"
+        spacing={5}
       >
         {isLoading &&
           skeletons.map((skeleton) => (
