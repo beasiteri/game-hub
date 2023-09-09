@@ -21,7 +21,7 @@ const GameGrid = ({ gameQuery }: Props) => {
       <SimpleGrid
         columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
         // or padding="10px" spacing={10} this will add only for left-right
-        padding="10px"
+        padding="20px"
         spacing={6}
       >
         {isLoading &&
