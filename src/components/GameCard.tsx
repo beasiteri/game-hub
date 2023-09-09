@@ -1,5 +1,12 @@
 import { Game } from "../hooks/useGames";
-import { Card, CardBody, Heading, Image, HStack } from "@chakra-ui/react";
+import {
+  Card,
+  CardBody,
+  Heading,
+  Image,
+  HStack,
+  VStack,
+} from "@chakra-ui/react";
 import PlatormIconList from "./PlatormIconList";
 import CriticScore from "./CriticScore";
 import getCroppedImageUrl from "../services/image-url";
@@ -11,7 +18,7 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card>
+    <Card height="100%">
       <Image src={getCroppedImageUrl(game.background_image)} />
       <CardBody>
         <HStack justifyContent="space-between" marginBottom={3}>
@@ -20,10 +27,10 @@ const GameCard = ({ game }: Props) => {
           />
           <CriticScore score={game.metacritic} />
         </HStack>
-        <Heading fontSize={"2xl"}>
-          {game.name}
+        <VStack alignItems={"left"}>
+          <Heading fontSize={"2xl"}>{game.name}</Heading>
           <Emoji rating={game.rating_top} />
-        </Heading>
+        </VStack>
       </CardBody>
     </Card>
   );
