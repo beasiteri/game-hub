@@ -1,3 +1,9 @@
 form {
   width: 100%;
 }
+
+.emoji-style {
+  bottom: 0;
+  margin-bottom: 15px;
+  position: absolute;
+}
